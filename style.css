@@ -1,19 +1,20 @@
 html {
   height: 100%;
   width: 100%;
-  font-family: "Titillium Web", sans-serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 body {
   min-height: 100%;
   min-width: 100%;
   background: linear-gradient(pink, violet);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-button {
-  font-size: 7px;
-}
-
+/* Styling for Main Content Box */
 #main-content {
   position: relative;
   display: flex;
@@ -22,16 +23,108 @@ button {
   flex-direction: column;
   border: 1px solid #333;
   background: rgba(255, 255, 255, 0.3);
-  padding: 15px 20px 18px 18px;
-  border-radius: 5px;
-  box-shadow: 2px 5px 5px #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 3px 6px 6px #333;
 }
 
+
 #list {
-  margin: 10px;
+  margin-top: 15px;
   border: 1px solid #333;
-  background: rgba(255, 255, 255, 0.75);
-  padding: 15px 20px 18px 18px;
-  border-radius: 5px;
-  box-shadow: 2px 5px 5px #333;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 3px 6px 6px #333;
+  width: 100%;
+  max-width: 500px;
 }
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.low {
+  color: green;
+}
+
+.medium {
+  color: lightskyblue;
+}
+
+.high {
+  color: red;
+  font-weight: bold;
+}
+
+/* Form Inputs */
+input[type="text"],
+input[type="date"],
+select {
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #666;
+  border-radius: 4px;
+  margin: 5px 0;
+}
+
+/* Buttons */
+button {
+  font-size: 10px;
+  padding: 5px 10px;
+  margin-left: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+/* Delete Button */
+button.delete {
+  background: red;
+  color: white;
+}
+
+button.delete:hover {
+  background: darkred;
+}
+
+/* Edit Button */
+button.edit {
+  background: orange;
+  color: white;
+}
+
+button.edit:hover {
+  background: darkorange;
+}
+
+/* Sorting Buttons */
+#sort-asc, #sort-desc {
+  background: darksalmon ;
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin: 5px;
+}
+
+#sort-asc:hover, #sort-desc:hover {
+  background: darkblue;
+}
+
