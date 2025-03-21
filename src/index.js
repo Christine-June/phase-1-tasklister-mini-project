@@ -12,12 +12,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const dueDate = document.querySelector("#task-due-date").value;
     const assignee = document.querySelector("#task-assignee").value.trim();
 
-    if (!taskInput) return; // Prevent empty tasks
+    if (!taskInput) return; 
 
     const taskItem = document.createElement("li");
-    taskItem.classList.add(priority); // Apply priority class for color styling
+    taskItem.classList.add(priority); 
 
-    // Task Content
     taskItem.innerHTML = `
       <span><strong>${taskInput}</strong> (${priority.toUpperCase()})</span>
       <span>🗓 Due: ${dueDate || "No date"}</span>
@@ -26,12 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
       <button class="delete">X</button>
     `;
 
-    // Delete Task
     taskItem.querySelector(".delete").addEventListener("click", () => {
       taskItem.remove();
     });
 
-    // Edit Task
     taskItem.querySelector(".edit").addEventListener("click", () => {
       const newText = prompt("Edit task:", taskInput);
       if (newText) {
@@ -40,10 +37,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     taskList.appendChild(taskItem);
-    form.reset(); // Clear form after submission
+    form.reset(); 
   });
 
-  // Sorting Functionality
   function sortTasks(order) {
     let tasks = [...taskList.children];
     tasks.sort((a, b) => {
@@ -52,9 +48,9 @@ document.addEventListener("DOMContentLoaded", () => {
         ? priorityOrder[a.classList[0]] - priorityOrder[b.classList[0]]
         : priorityOrder[b.classList[0]] - priorityOrder[a.classList[0]];
     });
-    taskList.innerHTML = ""; // Clear list
-    tasks.forEach(task => taskList.appendChild(task)); // Re-add sorted tasks
-  }
+    taskList.innerHTML = "";
+      tasks.forEach(task => taskList.appendChild(task));
+    }
 
   sortAscBtn.addEventListener("click", () => sortTasks("asc"));
   sortDescBtn.addEventListener("click", () => sortTasks("desc"));

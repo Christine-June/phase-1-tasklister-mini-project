@@ -1,7 +1,7 @@
 html {
   height: 100%;
   width: 100%;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Arial, sans-serif;
 }
 
 body {
@@ -14,7 +14,6 @@ body {
   flex-direction: column;
 }
 
-/* Styling for Main Content Box */
 #main-content {
   position: relative;
   display: flex;
@@ -64,7 +63,7 @@ li {
 }
 
 .medium {
-  color: lightskyblue;
+  color: yellow;
 }
 
 .high {
@@ -72,7 +71,7 @@ li {
   font-weight: bold;
 }
 
-/* Form Inputs */
+
 input[type="text"],
 input[type="date"],
 select {
@@ -83,7 +82,6 @@ select {
   margin: 5px 0;
 }
 
-/* Buttons */
 button {
   font-size: 10px;
   padding: 5px 10px;
@@ -94,7 +92,6 @@ button {
   transition: 0.3s;
 }
 
-/* Delete Button */
 button.delete {
   background: red;
   color: white;
@@ -104,7 +101,6 @@ button.delete:hover {
   background: darkred;
 }
 
-/* Edit Button */
 button.edit {
   background: orange;
   color: white;
@@ -114,7 +110,6 @@ button.edit:hover {
   background: darkorange;
 }
 
-/* Sorting Buttons */
 #sort-asc, #sort-desc {
   background: darksalmon ;
   color: white;
